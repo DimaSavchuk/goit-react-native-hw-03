@@ -26,8 +26,8 @@ export default function App() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <ImageBackground source={BACK_GROUND} style={styles.backGroundImg}>
-          {/* <LoginScreen /> */}
-          <RegistrationScreen />
+          <LoginScreen />
+          {/* <RegistrationScreen /> */}
         </ImageBackground>
         <StatusBar style="auto" />
       </View>

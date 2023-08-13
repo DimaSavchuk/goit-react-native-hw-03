@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Formik } from "formik";
 import * as yup from "yup";
+import StyledBtn from "../components/StyledBtn";
 
 const initialValues = {
   email: "",
@@ -108,9 +109,8 @@ const LoginScreen = () => {
                   )}
                 </View>
 
-                <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                  <Text style={[styles.text, styles.buttonText]}>Увійти</Text>
-                </TouchableOpacity>
+                <StyledBtn title="Увійти" onPress={handleSubmit} />
+
                 <View style={styles.signInContainer}>
                   <Text style={[styles.text, styles.signInText]}>
                     Немає акаунту?{" "}

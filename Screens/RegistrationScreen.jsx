@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Formik } from "formik";
 import * as yup from "yup";
+import StyledBtn from "../components/StyledBtn";
 
 const initialValues = {
   login: "",
@@ -133,9 +134,8 @@ const RegistrationScreen = () => {
                   )}
                 </View>
 
-                <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-                  <Text style={[styles.text, styles.buttonText]}>Увійти</Text>
-                </TouchableOpacity>
+                <StyledBtn title="Зареєстуватися" onPress={handleSubmit} />
+
                 <View style={styles.signInContainer}>
                   <Text style={[styles.text, styles.signInText]}>
                     Немає акаунту?{" "}
@@ -214,22 +214,6 @@ const styles = StyleSheet.create({
   },
   showBtn: {
     color: "#1B4371",
-  },
-  button: {
-    marginTop: 27,
-    marginBottom: 16,
-    paddingTop: 16,
-    paddingBottom: 16,
-    paddingLeft: 32,
-    paddingRight: 32,
-
-    backgroundColor: "#FF6C00",
-    borderRadius: 100,
-  },
-
-  buttonText: {
-    color: "white",
-    textAlign: "center",
   },
 
   signInContainer: {
